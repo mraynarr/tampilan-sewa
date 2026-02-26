@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manajemen Kamar - Sewa Kos</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <nav class="navbar">
         <div class="nav-container">
-            <h2 class="brand">Sewa <span>Kos</span></h2>
+            <a href="" style="text-decoration: none;">
+                <h2 class="brand">Sewa <span>Kos</span></h2>
+            </a>
             <ul>
                 <li><a href="#" class="active">Kamar</a></li>
-                <li><a href="#">User</a></li>
-                <li><a href="#">Admin</a></li>
+                <li><a href="penghuni.html">Penghuni</a></li>
+                <li><a href="pembayaran.html">Pembayaran</a></li>
             </ul>
         </div>
     </nav>
@@ -25,7 +29,7 @@
             <form class="form-kamar">
                 <div class="input-group">
                     <label>Nomor Kamar</label>
-                    <input type="text" placeholder="Contoh: L05">
+                    <input type="text" placeholder="Contoh : L05">
                 </div>
                 <div class="input-group">
                     <label>Tipe Kamar</label>
@@ -55,7 +59,7 @@
                             <th>No. Kamar</th>
                             <th>Tipe</th>
                             <th>Harga</th>
-                            <th>Aksi</th>
+                            <th class="action">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -64,7 +68,7 @@
                             <td>L05</td>
                             <td>Luas</td>
                             <td>Rp 2,000,000</td>
-                            <td><button class="btn-edit">Edit</button></td>
+                            <td class="action"><button class="btn-edit">Edit</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -76,7 +80,7 @@
             <div class="kamar-card">
                 <div class="card-image">
                     <span class="tag">Luas</span>
-                     <img src="img/kamar1.jpg" alt="Kamar L05">
+                    <img src="img/kamar1.jpg" alt="Kamar L05">
                 </div>
                 <div class="card-content">
                     <p class="no-kamar">No. L05</p>
@@ -100,7 +104,7 @@
             <div class="kamar-card">
                 <div class="card-image">
                     <span class="tag">Santai</span>
-                     <img src="img/kamar2.jpg" alt="Kamar L05">
+                    <img src="img/kamar2.jpg" alt="Kamar L05">
                 </div>
                 <div class="card-content">
                     <p class="no-kamar">No. S02</p>
@@ -112,7 +116,7 @@
             <div class="kamar-card">
                 <div class="card-image">
                     <span class="tag">Santai</span>
-                     <img src="img/kamar2.jpg" alt="Kamar L05">
+                    <img src="img/kamar2.jpg" alt="Kamar L05">
                 </div>
                 <div class="card-content">
                     <p class="no-kamar">No. S05</p>
@@ -124,4 +128,5 @@
     </div>
 
 </body>
+
 </html>

@@ -10,6 +10,47 @@ body {
     color: #333333;
 }
 
+select {
+    color: gray;
+}
+
+input[type="date"] {
+    color: grey;
+}
+
+hr.solid {
+    margin: 10px 0 10px 0;
+    border-top: 2px solid #ebebeb;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.badge {
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.bg-label-aktif {
+    background-color: #e8fadf !important;
+    color: #71dd37 !important;
+}
+
+.bg-label-cuti {
+    background-color: #d7f5fc !important;
+    color: #03c3ec !important;
+}
+
+.bg-label-jatuhtempo {
+    background-color: #ffe0db !important;
+    color: #ff3e1d !important;
+}
+
 .navbar {
     background-color: white;
     border-bottom-width: 1px;
@@ -79,7 +120,7 @@ body {
     padding: 20px;
     border-radius: 12px;
     margin-bottom: 25px;
-    box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .title {
@@ -93,6 +134,18 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     align-items: end;
+}
+
+.form-penghuni {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.row-dua {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .input-group label {
@@ -129,7 +182,7 @@ body {
     justify-self: end;
 }
 
-.btn-save:hover{
+.btn-save:hover {
     color: #dddddd;
     background-color: black;
 }
@@ -168,7 +221,7 @@ table td {
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .card-image {
@@ -227,9 +280,37 @@ table td {
     font-weight: bold;
     font-size: 0.8rem;
     border-color: white;
+    cursor: pointer;
 }
 
-.btn-edit:hover{
+.btn-wa {
+    padding: 6px 18px;
+    width: 90px;
+    border-radius: 8px;
+    background-color: #25D366;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-color: white;
+    cursor: pointer;
+}
+
+.btn-delete {
+    padding: 6px 18px;
+    width: 90px;
+    border-radius: 8px;
+    background-color: #ff2424;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-color: white;
+    cursor: pointer;
+}
+
+.btn-edit:hover,
+.btn-wa:hover,
+.btn-delete:hover {
+    color: #dddddd;
     background-color: black;
 }
 
@@ -252,7 +333,7 @@ table td {
 
 .kamar-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
     border-bottom: 3px solid #2563eb;
 }
 

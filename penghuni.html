@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Kamar - Sewa Kos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="" style="text-decoration: none;">
+                <h2 class="brand">Sewa <span>Kos</span></h2>
+            </a>
+            <ul>
+                <li><a href="index.html">Kamar</a></li>
+                <li><a href="#" class="active">Penghuni</a></li>
+                <li><a href="pembayaran.html">Pembayaran</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <section class="section-box">
+            <h3 class="title">Input Data Penghuni</h3>
+            <form class="form-penghuni">
+                <div class="input-group">
+                    <label>Nama</label>
+                    <input type="text" placeholder="Contoh : Jhon Doe">
+                </div>
+                <div class="input-group">
+                    <label>No Hp</label>
+                    <input type="text" placeholder="Contoh : +62821xxxxxxxx">
+                </div>
+                <div class="input-group">
+                    <label>Alamat</label>
+                    <input type="text" placeholder="Contoh : Jl. Ketintang Timur PTT">
+                </div>
+                <hr class="solid">
+                <div class="input-group">
+                    <label>Nomor Kamar</label>
+                    <select required>
+                        <option class="placeholder-dropdown" value="" disabled selected>Pilih Nomor Kamar</option>
+                        <option value="L03">L03</option>
+                        <option value="L04">L04</option>
+                        <option value="L05">L05</option>
+                        <option value="L06">L06</option>
+                    </select>
+                </div>
+                <div class="row-dua">
+                    <div class="input-group">
+                        <label>Tanggal Masuk</label>
+                        <input type="date">
+                    </div>
+                    <div class="input-group">
+                        <label>Durasi Sewa (Bulan)</label>
+                        <input type="number" placeholder="Contoh : 4">
+                    </div>
+                </div>
+                <button type="submit" class="btn-save">Simpan</button>
+            </form>
+        </section>
+
+        <section class="section-box">
+            <h3 class="title">Daftar Penghuni</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Kamar</th>
+                            <th>Tgl Masuk</th>
+                            <th>Jatuh Tempo</th>
+                            <th>Status</th>
+                            <th class="action">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Jhon Doe</td>
+                            <td>L03</td>
+                            <td>27/02/2026</td>
+                            <td>27/06/2026</td>
+                            <td>
+                                <span class="badge bg-label-aktif">Aktif</span>
+                            </td>
+                            <td class="action">
+                                <button class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8" />
+                                    </svg></button>
+                                <button class="btn-edit">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Hammam</td>
+                            <td>L04</td>
+                            <td>28/02/2026</td>
+                            <td>28/06/2026</td>
+                            <td>
+                                <span class="badge bg-label-cuti">Cuti</span>
+                            </td>
+                            <td class="action">
+                                <button class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8" />
+                                    </svg></button>
+                                <button class="btn-edit">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Rafi</td>
+                            <td>L05</td>
+                            <td>01/12/2025</td>
+                            <td>01/02/2026</td>
+                            <td>
+                                <span class="badge bg-label-jatuhtempo">Jatuh Tempo</span>
+                            </td>
+                            <td class="action">
+                                <button class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8" />
+                                    </svg></button>
+                                <button class="btn-edit">Edit</button>
+                                <button class="btn-delete"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z" />
+                                    </svg></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
