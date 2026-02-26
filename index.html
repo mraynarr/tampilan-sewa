@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Kamar - Sewa Kos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="brand">Sewa <span>Kos</span></h2>
+            <ul>
+                <li><a href="#" class="active">Kamar</a></li>
+                <li><a href="#">User</a></li>
+                <li><a href="#">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <section class="section-box">
+            <h3 class="title">Input Data Kamar</h3>
+            <form class="form-kamar">
+                <div class="input-group">
+                    <label>Nomor Kamar</label>
+                    <input type="text" placeholder="Contoh: L05">
+                </div>
+                <div class="input-group">
+                    <label>Tipe Kamar</label>
+                    <select required>
+                        <option value="" disabled selected>Pilih Tipe</option>
+                        <option value="Luas">Luas</option>
+                        <option value="Nyaman">Nyaman</option>
+                        <option value="Santai">Santai</option>
+                        <option value="Hemat">Hemat</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Harga (Ribuan)</label>
+                    <input type="number" placeholder="2,000,000">
+                </div>
+                <button type="submit" class="btn-save">Simpan Kamar</button>
+            </form>
+        </section>
+
+        <section class="section-box">
+            <h3 class="title">Daftar Kamar Terinput</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>No. Kamar</th>
+                            <th>Tipe</th>
+                            <th>Harga</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>L05</td>
+                            <td>Luas</td>
+                            <td>Rp 2,000,000</td>
+                            <td><button class="btn-edit">Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <h3 class="title">Preview Tampilan Web</h3>
+        <div class="card-grid">
+            <div class="kamar-card">
+                <div class="card-image">
+                    <span class="tag">Luas</span>
+                    <div class="placeholder-text">Kamar L05</div>
+                </div>
+                <div class="card-content">
+                    <p class="no-kamar">No. L05</p>
+                    <p class="price">Rp 2,000,000 <span>/bln</span></p>
+                    <button class="btn-detail">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="kamar-card">
+                <div class="card-image">
+                    <span class="tag">Luas</span>
+                    <div class="placeholder-text">Kamar L03</div>
+                </div>
+                <div class="card-content">
+                    <p class="no-kamar">No. L03</p>
+                    <p class="price">Rp 2,000,000 <span>/bln</span></p>
+                    <button class="btn-detail">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="kamar-card">
+                <div class="card-image">
+                    <span class="tag">Santai</span>
+                    <div class="placeholder-text">Kamar S02</div>
+                </div>
+                <div class="card-content">
+                    <p class="no-kamar">No. S02</p>
+                    <p class="price">Rp 1,500,000 <span>/bln</span></p>
+                    <button class="btn-detail">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="kamar-card">
+                <div class="card-image">
+                    <span class="tag">Santai</span>
+                    <div class="placeholder-text">Kamar S05</div>
+                </div>
+                <div class="card-content">
+                    <p class="no-kamar">No. S05</p>
+                    <p class="price">Rp 1,500,000 <span>/bln</span></p>
+                    <button class="btn-detail">Lihat Detail</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
