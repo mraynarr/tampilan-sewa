@@ -36,18 +36,32 @@
                 </div>
                 <div class="input-group">
                     <label>Bulan Dibayar</label>
-                    <input type="text" placeholder="Contoh : Jl. Ketintang Timur PTT">
+                    <input type="text" placeholder="Contoh : 2 bulan">
                 </div>
                 <hr class="solid">
                 <div class="input-group">
-                    <label>Metode Pembayaran</label>
-                    <select required>
-                        <option class="placeholder-dropdown" value="" disabled selected>Pilih Nomor Kamar</option>
-                        <option value="L03">L03</option>
-                        <option value="L04">L04</option>
-                        <option value="L05">L05</option>
-                        <option value="L06">L06</option>
-                    </select>
+                    <label>Nominal</label>
+                    <input type="number" placeholder="Contoh : 300000">
+                </div>
+                <div class="row-dua">
+                    <div class="input-group">
+                        <label>Metode Pembayaran</label>
+                        <select required>
+                            <option class="placeholder-dropdown" value="" disabled selected>Pilih Metode Pembayaran
+                            </option>
+                            <option value="Cash">Cash</option>
+                            <option value="Transfer">Transfer</option>
+                            <option value="Qris">Qris</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Tanggal Bayar</label>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Bukti Pembayaran</label>
+                    <input type="file" name="" id="" style="padding: 12px;">
                 </div>
                 <button type="submit" class="btn-save">Simpan</button>
             </form>
@@ -62,9 +76,10 @@
                             <th>No</th>
                             <th>Nama</th>
                             <th>Kamar</th>
-                            <th>Tgl Masuk</th>
-                            <th>Jatuh Tempo</th>
+                            <th>Bulan</th>
+                            <th>Nominal</th>
                             <th>Status</th>
+                            <th>Tanggal Bayar</th>
                             <th class="action">Action</th>
                         </tr>
                     </thead>
@@ -73,12 +88,16 @@
                             <td>1</td>
                             <td>Jhon Doe</td>
                             <td>L03</td>
-                            <td>27/02/2026</td>
+                            <td>2 bulan</td>
+                            <td>Rp600.000</td>
+                            <td><span class="badge bg-label-aktif">lunas</span></td>
                             <td>27/06/2026</td>
-                            <td>
-                                <span class="badge bg-label-aktif">Aktif</span>
-                            </td>
                             <td class="action">
+                                <button class="btn-edit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1s-1-.44-1-1s.44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4c.94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5a2.5 2.5 0 0 1 2.5-2.5a2.5 2.5 0 0 1 2.5 2.5a2.5 2.5 0 0 1-2.5 2.5m-7.86-1.75L8.85 19l.29-.74C10.43 15.06 13.5 13 17 13c1.05 0 2.06.21 3 .56V8l-6-6H6c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4.5c-.55-.66-1-1.42-1.36-2.25M13 3.5L18.5 9H13z" />
+                                    </svg></button>
                                 <button class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                         viewBox="0 0 24 24">
                                         <path fill="currentColor"
@@ -91,41 +110,22 @@
                             <td>2</td>
                             <td>Hammam</td>
                             <td>L04</td>
-                            <td>28/02/2026</td>
+                            <td>4 bulan</td>
+                            <td>Rp200.000</td>
+                            <td><span class="badge bg-label-jatuhtempo">Belum Lunas</span></td>
                             <td>28/06/2026</td>
-                            <td>
-                                <span class="badge bg-label-cuti">Cuti</span>
-                            </td>
                             <td class="action">
+                                <button class="btn-edit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1s-1-.44-1-1s.44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4c.94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5a2.5 2.5 0 0 1 2.5-2.5a2.5 2.5 0 0 1 2.5 2.5a2.5 2.5 0 0 1-2.5 2.5m-7.86-1.75L8.85 19l.29-.74C10.43 15.06 13.5 13 17 13c1.05 0 2.06.21 3 .56V8l-6-6H6c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4.5c-.55-.66-1-1.42-1.36-2.25M13 3.5L18.5 9H13z" />
+                                    </svg></button>
                                 <button class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                         viewBox="0 0 24 24">
                                         <path fill="currentColor"
                                             d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8" />
                                     </svg></button>
                                 <button class="btn-edit">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Rafi</td>
-                            <td>L05</td>
-                            <td>01/12/2025</td>
-                            <td>01/02/2026</td>
-                            <td>
-                                <span class="badge bg-label-jatuhtempo">Jatuh Tempo</span>
-                            </td>
-                            <td class="action">
-                                <button class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24">
-                                        <path fill="currentColor"
-                                            d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8" />
-                                    </svg></button>
-                                <button class="btn-edit">Edit</button>
-                                <button class="btn-delete"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24">
-                                        <path fill="currentColor"
-                                            d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z" />
-                                    </svg></button>
                             </td>
                         </tr>
                     </tbody>
