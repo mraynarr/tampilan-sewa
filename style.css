@@ -165,8 +165,6 @@ hr.solid {
     font-size: 1rem;
     background-color: #f9fafb;
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
 }
 
 .btn-save {
@@ -344,7 +342,7 @@ table td {
 
 .btn-detail:hover {
     background-color: #1e293b;
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 .btn-detail:active {
